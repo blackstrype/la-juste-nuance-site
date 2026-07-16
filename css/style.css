@@ -250,7 +250,8 @@ header {
   fill: currentColor;
 }
 
-.mobile-only-socials {
+.mobile-only-socials,
+.mobile-only {
   display: none;
 }
 
@@ -1280,8 +1281,12 @@ footer {
     display: none;
   }
 
-  .mobile-only-socials {
+  .mobile-only-socials,
+  .mobile-only {
     display: block;
+  }
+
+  .mobile-only-socials {
     margin: 1.5rem 0;
   }
 
