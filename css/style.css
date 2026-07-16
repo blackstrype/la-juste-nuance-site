@@ -533,7 +533,7 @@ header {
 
 .imagine-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
   margin-top: 4rem;
 }
@@ -1418,6 +1418,10 @@ footer {
     gap: 2rem;
   }
   
+  .imagine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1510,5 +1514,9 @@ footer {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+
+  .imagine-grid {
+    grid-template-columns: 1fr;
   }
 }
