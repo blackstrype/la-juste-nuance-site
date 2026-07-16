@@ -737,7 +737,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(22, 27, 16, 0.4);
+  background-color: rgba(22, 27, 16, 0.65);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1100;
@@ -755,7 +755,7 @@ header {
 }
 
 .service-modal-container {
-  background-color: var(--color-light);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   width: 90%;
   max-width: 800px;
