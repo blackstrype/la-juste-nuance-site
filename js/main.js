@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       // Placeholder calendly handle (can be configured)
-      const calendlyUrl = 'https://calendly.com/la-juste-nuance';
+      const calendlyUrl = 'https://calendly.com/florence-corolleur/30min';
       
       // Check if Calendly widget script is loaded
       if (typeof Calendly !== 'undefined') {
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBookBtn = modalBody.querySelector('.modal-book-btn');
     modalBookBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const calendlyUrl = 'https://calendly.com/la-juste-nuance';
+      const calendlyUrl = 'https://calendly.com/florence-corolleur/30min';
       if (typeof Calendly !== 'undefined') {
         Calendly.initPopupWidget({ url: calendlyUrl });
       } else {
