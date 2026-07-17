@@ -1,0 +1,41 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/style.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  
+  <!-- Calendly Widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" href="images/Conseil_en_image_les_Clayes_sous_Bois_logo.png">
+</head>
+<body>
+  <Header />
+  
+  <slot />
+
+  <Footer />
+
+  <!-- Bundled Client script -->
+  <script>
+    import '../scripts/main.js';
+  </script>
+
+  <!-- Calendly link integration script support -->
+  <script is:inline src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>

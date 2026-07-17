@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           <div class="service-modal-actions">
             <a href="#" class="btn btn-primary btn-book modal-book-btn">Réserver</a>
-            <a href="${key}.html" class="btn btn-outline">Voir les détails</a>
+            <a href="/la-juste-nuance-site/${key}" class="btn btn-outline">Voir les détails</a>
           </div>
         </div>
       </div>

@@ -1221,8 +1221,8 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.4fr 0.9fr 1.3fr 1.2fr;
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
@@ -1239,7 +1239,8 @@ footer {
 }
 
 .footer-links h4,
-.footer-social h4 {
+.footer-contact h4,
+.footer-social-legal h4 {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -1248,22 +1249,37 @@ footer {
   color: var(--color-peach);
 }
 
-.footer-links ul {
+.footer-links ul,
+.footer-social-legal ul {
   list-style: none;
 }
 
-.footer-links li {
-  margin-bottom: 0.8rem;
+.footer-links li,
+.footer-social-legal li {
+  margin-bottom: 0.2rem;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-social-legal a,
+.footer-contact a {
   color: rgba(254, 250, 232, 0.7);
   font-size: 0.95rem;
+  display: inline-block;
+  padding: 0.55rem 0; /* Ensures 44px touch targets on mobile when including line height */
+  transition: var(--transition-smooth);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-social-legal a:hover,
+.footer-contact a:hover {
   color: var(--color-peach);
   padding-left: 5px;
+}
+
+.footer-contact p {
+  color: rgba(254, 250, 232, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .social-icons {
@@ -1302,7 +1318,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: rgba(254, 250, 232, 0.5);
+  color: rgba(254, 250, 232, 0.75); /* Increased contrast from 0.5 to satisfy WCAG AA 4.5:1 ratio */
 }
 
 .credit-link {
