@@ -1260,7 +1260,7 @@ footer {
 }
 
 .footer-links a,
-.footer-social-legal a,
+.footer-social-legal ul a,
 .footer-contact a {
   color: rgba(254, 250, 232, 0.7);
   font-size: 0.95rem;
@@ -1270,7 +1270,7 @@ footer {
 }
 
 .footer-links a:hover,
-.footer-social-legal a:hover,
+.footer-social-legal ul a:hover,
 .footer-contact a:hover {
   color: var(--color-peach);
   padding-left: 5px;
