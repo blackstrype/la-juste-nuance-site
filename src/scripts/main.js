@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = {
     palette: {
       title: "La Juste Palette",
-      price: "180 €",
+      price: "160 €",
       duration: "Séance individuelle de 2h aux Clayes-sous-Bois",
       experience: "Nous réalisons ensemble ton diagnostic colorimétrique en présentiel. Je place les drapages colorés un par un autour de ton visage pour observer en lumière naturelle les teintes qui t'éclairent et celles qui t'éteignent. Pas de théorie figée, ton visage est notre seule référence.",
       deliverables: [
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     allure: {
       title: "La Juste Allure",
-      price: "160 €",
+      price: "140 €",
       duration: "Séance individuelle de 2h30 aux Clayes-sous-Bois",
       experience: "Nous réalisons ton diagnostic morphologique et ton étude de style de façon bienveillante. Nous observons les lignes, les volumes et les proportions de ton corps pour définir ton style signature en accord avec ta personnalité et ton quotidien.",
       deliverables: [
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     essence: {
       title: "La Juste Essence",
-      price: "640 €",
+      price: "540 €",
       duration: "Accompagnement de 4h30 (1 ou 2 séances aux Clayes-sous-Bois)",
       experience: "La formule d'exploration complète combinant colorimétrie, morphologie et style vestimentaire. C'est l'alliance parfaite pour révéler ton image sous toutes ses facettes, avec douceur et alignement intérieur.",
       deliverables: [
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'garde-robe': {
       title: "La Juste Garde-Robe",
-      price: "960 €",
+      price: "840 €",
       duration: "Accompagnement de 9h en 3 séances (dont 3h à ton domicile)",
       experience: "L'expérience premium pour aller jusqu'au bout de la démarche. Après avoir révélé tes couleurs et ton style signature, nous trions ton dressing à ton domicile. Nous créons de nouvelles tenues à partir de ce que tu possèdes déjà. Chaque tenue est photographiée et archivée pour ton quotidien.",
       deliverables: [
