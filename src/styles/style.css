@@ -516,7 +516,7 @@ header {
 /* Bloc 3 Bonus: Imagine */
 .imagine-section {
   text-align: center;
-  background-color: var(--color-sage-dark);
+  background-color: var(--color-sage);
   color: var(--color-cream);
   position: relative;
   overflow: hidden;
