@@ -21,7 +21,7 @@ const devHtmlRewrite = () => ({
 export default defineConfig({
   output: 'static',
   build: {
-    format: 'file', // Generates page.html instead of page/index.html
+    format: 'directory', // Generates page/index.html so GitHub Pages cleanly serves /page without 404
   },
   base: '/la-juste-nuance-site', // GitHub Pages subfolder compatibility
   vite: {
