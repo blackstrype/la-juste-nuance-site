@@ -318,13 +318,62 @@ import Layout from "../layouts/Layout.astro";
           <p>Le matin, tu sais exactement quoi enfiler. Pas par défaut mais parce que c'est toi. Tu portes ces boucles d'oreilles que tu avais rangées au fond d'un tiroir. Le rouge à lèvres qui te semblait impossible avant mais maintenant, avec la bonne teinte, c’est une évidence. Ton mari te dit que tu es belle. Et cette fois, tu te dis que c'est peut-être vrai.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Testimonials / Google My Business -->
-      <div class="testimonials-wrapper">
-        <a href="https://maps.app.goo.gl/vGFQpeRh5s1S73iG8" target="_blank" rel="noopener noreferrer" class="gmb-badge">
-          <span>Avis Google My Business</span>
-          <span class="stars">★★★★★</span>
-          <span style="font-weight: 600; text-decoration: underline;">Voir les témoignages</span>
+  <!-- Testimonials / Google My Business Section -->
+  <section class="section section-alt" id="avis-clients" style="background-color: var(--color-sage-light);">
+    <div class="container">
+      <h2 class="section-title">Ce qu'elles en disent</h2>
+      <p class="section-subtitle">Témoignages & Avis Google 5★</p>
+
+      <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 960px; margin: 3rem auto 0;">
+        
+        <!-- Review 1 -->
+        <div class="review-card" style="background: var(--color-white); padding: 2.2rem; border-radius: var(--border-radius-md); box-shadow: var(--color-shadow); text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+              <div style="color: #fbbc04; font-size: 1.25rem; letter-spacing: 2px;">★★★★★</div>
+              <span style="font-size: 0.78rem; background: #e8f0fe; color: #1a73e8; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v3.8h5.4c-.2 1.2-.9 2.3-2 3.1v2.5h3.2c1.9-1.7 3-4.3 3-7.5 0-.7-.1-1.3-.2-1.9z"/><path d="M12 21c2.7 0 5-1 6.7-2.6l-3.2-2.5c-.9.6-2 1-3.5 1-2.7 0-4.9-1.8-5.7-4.3H3.1v2.6C4.8 18.6 8.1 21 12 21z"/><path d="M6.3 12.6c-.2-.6-.3-1.3-.3-2.1s.1-1.5.3-2.1V5.8H3.1C2.4 7.2 2 8.8 2 10.5s.4 3.3 1.1 4.7l3.2-2.6z"/><path d="M12 4.1c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 1.2 14.6 0 12 0 8.1 0 4.8 2.4 3.1 5.8l3.2 2.6c.8-2.5 3-4.3 5.7-4.3z"/></svg>
+                Avis Google
+              </span>
+            </div>
+            <p style="font-size: 1.02rem; line-height: 1.7; color: var(--color-muted); font-style: italic; margin-bottom: 1.5rem;">
+              « Prestation très intéressante, j'ai appris beaucoup de choses et d'astuces. Florence est patiente, positive et à l'écoute. Après notre rencontre, j'ai compris que le but n'était pas de racheter une garde robe complète mais plutôt d'adapter la mienne à mon physique et ma personnalité. Merci pour ce RDV ! »
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; color: var(--color-dark); font-size: 0.95rem;">Deesse Lylith</span>
+            <a href="https://maps.app.goo.gl/bjxBjNBTqJhmrFMT9" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--color-sage-dark); text-decoration: underline;">Voir l'avis complet</a>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card" style="background: var(--color-white); padding: 2.2rem; border-radius: var(--border-radius-md); box-shadow: var(--color-shadow); text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+              <div style="color: #fbbc04; font-size: 1.25rem; letter-spacing: 2px;">★★★★★</div>
+              <span style="font-size: 0.78rem; background: #e8f0fe; color: #1a73e8; padding: 0.25rem 0.65rem; border-radius: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v3.8h5.4c-.2 1.2-.9 2.3-2 3.1v2.5h3.2c1.9-1.7 3-4.3 3-7.5 0-.7-.1-1.3-.2-1.9z"/><path d="M12 21c2.7 0 5-1 6.7-2.6l-3.2-2.5c-.9.6-2 1-3.5 1-2.7 0-4.9-1.8-5.7-4.3H3.1v2.6C4.8 18.6 8.1 21 12 21z"/><path d="M6.3 12.6c-.2-.6-.3-1.3-.3-2.1s.1-1.5.3-2.1V5.8H3.1C2.4 7.2 2 8.8 2 10.5s.4 3.3 1.1 4.7l3.2-2.6z"/><path d="M12 4.1c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 1.2 14.6 0 12 0 8.1 0 4.8 2.4 3.1 5.8l3.2 2.6c.8-2.5 3-4.3 5.7-4.3z"/></svg>
+                Avis Google
+              </span>
+            </div>
+            <p style="font-size: 1.02rem; line-height: 1.7; color: var(--color-muted); font-style: italic; margin-bottom: 1.5rem;">
+              « Une expérience précieuse que je recommande à toutes celles qui souhaitent trouver un style qui leur ressemble vraiment ! (...) Avec La Juste Nuance, Florence propose bien plus qu'une étude de colorimétrie. Son accompagnement est une véritable parenthèse qui permet de mieux se connaître et d'aligner son image avec sa personnalité. »
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; color: var(--color-dark); font-size: 0.95rem;">Stel R</span>
+            <a href="https://maps.app.goo.gl/if19BkrAwQPfk9Xf8" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--color-sage-dark); text-decoration: underline;">Voir l'avis complet</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 3.5rem;">
+        <a href="https://maps.app.goo.gl/vGFQpeRh5s1S73iG8" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--color-sage-dark); color: var(--color-sage-dark);">
+          ★ Voir tous les avis sur Google My Business
         </a>
       </div>
     </div>
