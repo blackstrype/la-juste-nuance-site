@@ -24,6 +24,12 @@ export default defineConfig({
     format: 'directory', // Generates page/index.html so GitHub Pages cleanly serves /page without 404
   },
   base: '/la-juste-nuance-site', // GitHub Pages subfolder compatibility
+  redirects: {
+    '/palette': '/colorimetrie-conseil-en-image',
+    '/allure': '/morphologie-conseil-en-image',
+    '/essence': '/style-conseil-en-image',
+    '/garde-robe': '/tri-de-dressing-conseil-en-image'
+  },
   vite: {
     plugins: [devHtmlRewrite()],
   }
