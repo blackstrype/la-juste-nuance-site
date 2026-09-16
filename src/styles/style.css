@@ -409,8 +409,6 @@ header {
 /* Call to Action Line */
 .cta-note {
   margin-top: 2rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
   color: var(--color-muted);
 }
 
