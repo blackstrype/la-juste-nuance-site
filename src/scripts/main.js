@@ -1,6 +1,15 @@
 // La Juste Nuance - Client Interactivity
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Calendly Helper Function
+  const openCalendly = function(calendlyUrl) {
+    if (typeof Calendly !== 'undefined') {
+      Calendly.initPopupWidget({ url: calendlyUrl });
+    } else {
+      window.open(calendlyUrl, '_blank');
+    }
+  };
+
   // Mobile Nav Toggle
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
@@ -82,13 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Placeholder calendly handle (can be configured)
       const calendlyUrl = 'https://calendly.com/florence-corolleur/30min';
       
-      // Check if Calendly widget script is loaded
-      if (typeof Calendly !== 'undefined') {
-        Calendly.initPopupWidget({ url: calendlyUrl });
-      } else {
-        // Fallback to opening Calendly in a new tab if library is not loaded
-        window.open(calendlyUrl, '_blank');
-      }
+      openCalendly(calendlyUrl);
     });
   });
 
@@ -210,11 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contactModal.classList.remove('active');
       document.body.style.overflow = '';
       const calendlyUrl = 'https://calendly.com/florence-corolleur/30min';
-      if (typeof Calendly !== 'undefined') {
-        Calendly.initPopupWidget({ url: calendlyUrl });
-      } else {
-        window.open(calendlyUrl, '_blank');
-      }
+      openCalendly(calendlyUrl);
     });
 
     // Form Submit Handler
