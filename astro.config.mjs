@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // Vite plugin to rewrite .html requests to clean paths during local development
 const devHtmlRewrite = () => ({
@@ -19,11 +20,13 @@ const devHtmlRewrite = () => ({
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://blackstrype.github.io',
   output: 'static',
   build: {
     format: 'directory', // Generates page/index.html so GitHub Pages cleanly serves /page without 404
   },
   base: '/la-juste-nuance-site', // GitHub Pages subfolder compatibility
+  integrations: [sitemap()],
   vite: {
     plugins: [devHtmlRewrite()],
   }
