@@ -27,6 +27,12 @@ export default defineConfig({
   },
   base: '/la-juste-nuance-site', // GitHub Pages subfolder compatibility
   integrations: [sitemap()],
+  redirects: {
+    '/palette': '/colorimetrie-conseil-en-image',
+    '/allure': '/morphologie-conseil-en-image',
+    '/essence': '/style-conseil-en-image',
+    '/garde-robe': '/tri-de-dressing-conseil-en-image'
+  },
   vite: {
     plugins: [devHtmlRewrite()],
   }
