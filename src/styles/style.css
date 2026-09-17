@@ -420,6 +420,7 @@ header {
 .cta-note {
   margin-top: 2rem;
   color: var(--color-muted);
+  font-size: 1.15rem;
 }
 
 /* Bloc 2: Pain Points & Shift */
