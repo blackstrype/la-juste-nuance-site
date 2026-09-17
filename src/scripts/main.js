@@ -59,16 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle active navigation states on scroll for single-page links
   const sections = document.querySelectorAll('section[id]');
   
+  // Cache navigation links to avoid querying DOM on every scroll
+  const sectionLinks = Array.from(sections).map(section => {
+    const sectionId = section.getAttribute('id');
+    const navLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
+    return { section, navLink };
+  });
+
   function scrollActive() {
     const scrollY = window.pageYOffset;
     
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120; // offset header
-      const sectionId = current.getAttribute('id');
-      const navLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
-      
+    sectionLinks.forEach(({ section, navLink }) => {
       if (navLink) {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 120; // offset header
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           navLink.classList.add('active');
         } else {
