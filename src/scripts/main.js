@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Tab 1: Form -->
         <div class="contact-tab-panel" id="contact-panel-form">
-          <form class="contact-form" action="https://formsubmit.co/ajax/florence.corolleur@gmail.com" method="POST">
+          <form class="contact-form" method="POST">
             <input type="hidden" name="_subject" value="Nouveau message depuis La Juste Nuance">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -228,7 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         const formData = new FormData(form);
-        const response = await fetch(form.action, {
+        const targetUrl = 'https://formsubmit.co/ajax/' + atob('ZmxvcmVuY2UuY29yb2xsZXVyQGdtYWlsLmNvbQ==');
+        const response = await fetch(targetUrl, {
           method: 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
