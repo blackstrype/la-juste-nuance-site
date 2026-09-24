@@ -24,7 +24,7 @@ describe('openContactModal', () => {
     `;
 
     // Execute script logic inside the vitest environment
-    eval(scriptContent.replace(/export const openCalendly/g, 'const openCalendly'));
+    eval(scriptContent);
 
     // Dispatch DOMContentLoaded for event listeners
     document.dispatchEvent(new Event('DOMContentLoaded'));
