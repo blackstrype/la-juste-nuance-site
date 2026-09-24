@@ -1,8 +1,5 @@
 import { describe, it, expect, beforeAll, beforeEach } from 'vitest';
-import fs from 'fs';
-import path from 'path';
-
-const scriptContent = fs.readFileSync(path.resolve(__dirname, 'main.js'), 'utf-8');
+import { initContactModal } from './main.js';
 
 describe('openContactModal', () => {
   beforeAll(() => {
@@ -24,10 +21,7 @@ describe('openContactModal', () => {
     `;
 
     // Execute script logic inside the vitest environment
-    eval(scriptContent.replace(/export const openCalendly/g, 'const openCalendly'));
-
-    // Dispatch DOMContentLoaded for event listeners
-    document.dispatchEvent(new Event('DOMContentLoaded'));
+    initContactModal();
   });
 
   beforeEach(() => {
