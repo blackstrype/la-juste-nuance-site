@@ -9,8 +9,7 @@ export const openCalendly = function(calendlyUrl) {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
+export const initMobileNav = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
@@ -33,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+};
 
-  // FAQ Accordion
+export const initFaq = () => {
   const faqQuestions = document.querySelectorAll('.faq-question');
   
   faqQuestions.forEach(question => {
@@ -55,8 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+};
 
-  // Handle active navigation states on scroll for single-page links
+export const initScrollActive = () => {
   const sections = document.querySelectorAll('section[id]');
   
   // Cache navigation links to avoid querying DOM on every scroll
@@ -86,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sections.length > 0) {
     window.addEventListener('scroll', scrollActive);
   }
-  
-  // Calendly Booking Integration Helper
-  // We can initialize Calendly popup on buttons with class 'btn-book'
+};
+
+export const initBookingButtons = () => {
   const bookingButtons = document.querySelectorAll('.btn-book');
   bookingButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -99,8 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
       openCalendly(calendlyUrl);
     });
   });
+};
 
-  // Bind Click Event on Cards
+export const initServiceCards = () => {
   const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach(card => {
     card.style.cursor = 'pointer';
@@ -117,8 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+};
 
-  // Create Contact Modal Element in DOM if not exists
+export const initContactModal = () => {
   let contactModal = document.querySelector('.contact-modal');
   if (!contactModal) {
     contactModal = document.createElement('div');
@@ -299,6 +302,15 @@ document.addEventListener('DOMContentLoaded', () => {
       openContactModal('form');
     });
   });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
+  initFaq();
+  initScrollActive();
+  initBookingButtons();
+  initServiceCards();
+  initContactModal();
 });
 
 // Add Keyframe animation for mobile menu fade-in dynamically
