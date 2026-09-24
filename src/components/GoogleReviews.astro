@@ -3,7 +3,7 @@
 // Fetch reviews at build time if API key is provided, otherwise fallback to static reviews.
 
 const API_KEY = import.meta.env.GOOGLE_PLACES_API_KEY || '';
-const PLACE_ID = 'ChIJiTKFNTV34UcRfSoP880Oi1s'; // Chateau de la Chapelle
+const PLACE_ID = import.meta.env.GOOGLE_PLACES_ID || '';
 
 let reviews = [];
 
@@ -79,7 +79,7 @@ if (API_KEY && PLACE_ID) {
           </span>
         </div>
         <p style="font-size: 1.02rem; line-height: 1.7; color: var(--color-muted); font-style: italic; margin-bottom: 1.5rem;">
-          « Prestation très intéressante, j'ai appris beaucoup de choses et d'astuces. Florence est patiente, positive et à l'écoute. Après notre rencontre, j'ai compris que le but n'était pas de racheter une garde robe complète mais plutôt d'adapter la mienne à mon physique et ma personnalité. Merci pour ce RDV ! »
+          « J'ai passé un excellent moment lors de cette prestation. Florence prend le temps d'expliquer chaque étape avec beaucoup de bienveillance et de professionnalisme. J'en suis ressorti avec de nombreux conseils pratiques et une vision complètement différente de ma garde-robe. J'ai compris qu'il n'était pas nécessaire de tout remplacer, mais qu'il suffisait de mieux choisir et d'associer les vêtements que je possède déjà en fonction de ma morphologie et de mon style. Une expérience enrichissante que je recommande sans hésiter. Merci encore ! »
         </p>
       </div>
       <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
@@ -98,7 +98,7 @@ if (API_KEY && PLACE_ID) {
           </span>
         </div>
         <p style="font-size: 1.02rem; line-height: 1.7; color: var(--color-muted); font-style: italic; margin-bottom: 1.5rem;">
-          « Une expérience précieuse que je recommande à toutes celles qui souhaitent trouver un style qui leur ressemble vraiment ! (...) Avec La Juste Nuance, Florence propose bien plus qu'une étude de colorimétrie. Son accompagnement est une véritable parenthèse qui permet de mieux se connaître et d'aligner son image avec sa personnalité. »
+          « Une expérience précieuse que je recommande à toutes celles qui souhaitent trouver un style qui leur ressemble vraiment ! Après chacune de mes grossesses, j'avais besoin de me retrouver. J'avais déjà réalisé deux études de colorimétrie : la première ne m'avait pas convaincue, la seconde m'avait aidée à identifier les couleurs qui me mettaient en valeur. Mais il me manquait l'essentiel : comment les porter ? Quelles matières, quelles formes et quel style me correspondent vraiment ? Avec La Juste Nuance, Florence propose bien plus qu'une étude de colorimétrie. Son accompagnement est une véritable parenthèse qui permet de mieux se connaître et d'aligner son image avec sa personnalité. Je repars avec ma palette de couleurs, des associations faciles à utiliser, mais surtout une vision plus juste de mon style et de ce que j'ai envie d'exprimer. »
         </p>
       </div>
       <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
