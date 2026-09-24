@@ -9,13 +9,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.1.1"
   },
   "devDependencies": {
-    "puppeteer": "^25.11.0"
+    "jsdom": "^29.1.1",
+    "puppeteer": "^25.11.0",
+    "vitest": "^5.0.1"
   }
 }
