@@ -1,15 +1,15 @@
 // La Juste Nuance - Client Interactivity
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Calendly Helper Function
-  const openCalendly = function(calendlyUrl) {
-    if (typeof Calendly !== 'undefined') {
-      Calendly.initPopupWidget({ url: calendlyUrl });
-    } else {
-      window.open(calendlyUrl, '_blank');
-    }
-  };
+// Calendly Helper Function
+export const openCalendly = function(calendlyUrl) {
+  if (typeof Calendly !== 'undefined') {
+    Calendly.initPopupWidget({ url: calendlyUrl });
+  } else {
+    window.open(calendlyUrl, '_blank');
+  }
+};
 
+document.addEventListener('DOMContentLoaded', () => {
   // Mobile Nav Toggle
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
