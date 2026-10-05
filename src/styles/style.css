@@ -17,6 +17,9 @@
   --color-muted: #5e694d;
   --color-white: #ffffff;
   --color-shadow: rgba(44, 53, 30, 0.08);
+  --color-google-star: #fbbc04;
+  --color-google-blue: #1a73e8;
+  --color-google-blue-light: #e8f0fe;
   
   --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Georgia', serif;
   --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
@@ -1511,4 +1514,77 @@ footer {
   margin-top: 1rem;
   border: 1px solid rgba(140, 166, 83, 0.2);
   line-height: 1.6;
+}
+
+/* Google Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 960px;
+  margin: 3rem auto 0;
+}
+
+.review-card {
+  background: var(--color-white);
+  padding: 2.2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--color-shadow);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.review-stars {
+  color: var(--color-google-star);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.review-badge {
+  font-size: 0.78rem;
+  background: var(--color-google-blue-light);
+  color: var(--color-google-blue);
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.review-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.review-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: 0.95rem;
+}
+
+.review-link {
+  font-size: 0.82rem;
+  color: var(--color-sage-dark);
+  text-decoration: underline;
 }
