@@ -55,6 +55,7 @@ Before opening a PR, always run `npm test` and `npm run build`, and make sure bo
 Tasks are GitHub issues filed by a separate Tasker session (labels `proposed`, `ready`, `P1`–`P3`, `size:S/M/L`). Only the human maintainer adds `ready`. Any session that isn't running `/tasker` is a worker and implements one issue.
 
 - Only work on an issue labelled `ready`. If it isn't, stop and say so.
+- If Scott explicitly asks you to work on an issue, that counts as approval. Add ready, remove proposed, then start.
 - Read the whole issue, comments included, before starting.
 - Stay within "Files likely touched". Never modify anything listed under "Do not touch". If the task really requires it, stop and explain why instead of doing it.
 - Use the acceptance criteria as your checklist. Copy them into the PR description, each one ticked or explained.
