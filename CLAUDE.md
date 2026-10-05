@@ -49,3 +49,16 @@ Before opening a PR, always run `npm test` and `npm run build`, and make sure bo
 - `main` deploys automatically to GitHub Pages (`.github/workflows/deploy.yml`). Never push directly to `main`; work on a branch and open a PR.
 - Keep PRs small and focused, one change per PR. In the description, say which pages changed and, for visual changes, what to check on mobile and desktop.
 - Check layouts at mobile width: the header has a separate burger menu and mobile-only links (`.mobile-only`, `.mobile-only-socials`).
+
+## Working on an issue
+
+Tasks are GitHub issues filed by a separate Tasker session (labels `proposed`, `ready`, `P1`–`P3`, `size:S/M/L`). Only the human maintainer adds `ready`. Any session that isn't running `/tasker` is a worker and implements one issue.
+
+- Only work on an issue labelled `ready`. If it isn't, stop and say so.
+- Read the whole issue, comments included, before starting.
+- Stay within "Files likely touched". Never modify anything listed under "Do not touch". If the task really requires it, stop and explain why instead of doing it.
+- Use the acceptance criteria as your checklist. Copy them into the PR description, each one ticked or explained.
+- Put `Closes #N` in the PR description.
+- Don't fix unrelated problems you notice. List them under a "Noticed, not fixed" heading in the PR so the Tasker can pick them up.
+- If an open question blocks the work, comment on the issue with the question and stop. Don't guess or invent content.
+- One issue per branch and per PR.
