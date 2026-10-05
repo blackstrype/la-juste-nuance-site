@@ -47,6 +47,7 @@ Before opening a PR, always run `npm test` and `npm run build`, and make sure bo
 ## Workflow
 
 - `main` deploys automatically to GitHub Pages (`.github/workflows/deploy.yml`). Never push directly to `main`; work on a branch and open a PR.
+- **Naming:** name the branch and the PR after the subject of the change, never with a random Docker-style name (e.g. `practical-faraday-s44d0l`). Branches are short kebab-case slugs of 2–5 words, such as `compress-images` or `add-404-page` (when the task comes from an issue, you may suffix its number, e.g. `compress-images-40`). PR titles are short, imperative and in English (e.g. "Compress site images"). If the environment already assigned a random branch name, rename it before opening the PR when you can; otherwise keep the assigned name but still give the PR a subject-based title.
 - Keep PRs small and focused, one change per PR. In the description, say which pages changed and, for visual changes, what to check on mobile and desktop.
 - Check layouts at mobile width: the header has a separate burger menu and mobile-only links (`.mobile-only`, `.mobile-only-socials`).
 
