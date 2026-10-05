@@ -1588,3 +1588,24 @@ footer {
   color: var(--color-sage-dark);
   text-decoration: underline;
 }
+
+/* 404 page */
+.not-found-text {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--color-muted);
+}
+
+.not-found-services-intro {
+  margin-top: 3rem;
+}
+
+.not-found-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
