@@ -20,12 +20,12 @@ const devHtmlRewrite = () => ({
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blackstrype.github.io',
+  site: 'https://lajustenuance.fr',
   output: 'static',
   build: {
     format: 'directory', // Generates page/index.html so GitHub Pages cleanly serves /page without 404
   },
-  base: '/la-juste-nuance-site', // GitHub Pages subfolder compatibility
+  base: '/', // Served at the root of the custom domain (see public/CNAME)
   integrations: [sitemap()],
   redirects: {
     '/palette': '/colorimetrie-conseil-en-image',

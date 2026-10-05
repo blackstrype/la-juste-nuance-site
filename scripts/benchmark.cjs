@@ -23,7 +23,7 @@ async function runBenchmark() {
   });
 
   const start = Date.now();
-  await page.goto('http://localhost:4321/la-juste-nuance-site/', { waitUntil: 'load' });
+  await page.goto('http://localhost:4321/', { waitUntil: 'load' });
   const end = Date.now();
 
   console.log(`Load time: ${end - start}ms`);
