@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { buildBreadcrumb } from "../data/structuredData.js";
+
+const jsonLd = [buildBreadcrumb({ name: "À propos", path: "about" })];
 ---
 
-<Layout title="À propos de Florence, conseil en image | La Juste Nuance" description="Découvrez le parcours de Florence, accompagnante en image de soi certifiée au coaching en image Incarnation® aux Clayes-sous-Bois.">
+<Layout title="À propos de Florence, conseil en image | La Juste Nuance" jsonLd={jsonLd} description="Découvrez le parcours de Florence, accompagnante en image de soi certifiée au coaching en image Incarnation® aux Clayes-sous-Bois.">
 <!-- Product/About Hero Section -->
   <section class="product-hero">
     <div class="container">
+      <Breadcrumb current="À propos" />
       <div class="product-hero-container">
         <div class="product-hero-text">
           <p class="section-subtitle" style="text-align: left; margin-bottom: 1rem;">Qui suis-je ?</p>

@@ -1,16 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { buildService } from "../data/structuredData.js";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import RelatedServices from "../components/RelatedServices.astro";
+import { buildService, buildBreadcrumb } from "../data/structuredData.js";
 
 const title = "La Juste Allure - Morphologie & Conseil en image | La Juste Nuance";
 const description = "Pour te réapproprier ton corps et trouver des repères pour t'habiller avec plaisir. Accompagnement silhouette bienveillant aux Clayes-sous-Bois.";
-const jsonLd = [buildService({ name: "La Juste Allure", description, path: "morphologie-conseil-en-image" })];
+const jsonLd = [buildService({ name: "La Juste Allure", description, path: "morphologie-conseil-en-image" }), buildBreadcrumb({ name: "La Juste Allure", path: "morphologie-conseil-en-image" })];
 ---
 
 <Layout title={title} description={description} jsonLd={jsonLd}>
 <!-- Product Hero Section -->
   <section class="product-hero">
     <div class="container">
+      <Breadcrumb current="La Juste Allure" />
       <div class="product-hero-container">
         <div class="product-hero-text">
           <p class="section-subtitle" style="text-align: left; margin-bottom: 1rem;">Accompagnement individuel</p>
@@ -92,6 +95,8 @@ const jsonLd = [buildService({ name: "La Juste Allure", description, path: "morp
           Au-delà de ce périmètre, n'hésite pas à me contacter pour étudier la faisabilité et les frais de déplacement.
         </p>
       </div>
+
+      <RelatedServices current="morphologie-conseil-en-image" />
 
       <!-- Summary and CTA -->
       <div class="focus-box" style="margin-top: 4rem; border-left-color: var(--color-peach); background-color: var(--color-peach-light); padding: 3rem; border-radius: var(--border-radius-md);">

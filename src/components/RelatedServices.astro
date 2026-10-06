@@ -1,0 +1,19 @@
+---
+import { relatedServices } from '../data/services.js';
+
+interface Props {
+  current: string;
+}
+
+const { current } = Astro.props;
+const services = relatedServices(current);
+---
+<nav class="related-services" aria-labelledby="related-services-title">
+  <h2 id="related-services-title" class="related-services-title">Découvre aussi mes autres accompagnements</h2>
+  <ul class="related-services-list">
+    {services.map((service) => (
+      <li><a href={service.path}>{service.anchor}</a></li>
+    ))}
+  </ul>
+  <p class="related-services-all"><a href="./#services">Voir tous les accompagnements de conseil en image</a></p>
+</nav>
