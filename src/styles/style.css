@@ -336,7 +336,7 @@ header {
   align-items: center;
 }
 
-.hero-text h1 {
+.hero-banner {
   margin-bottom: 0.5rem;
 }
 
@@ -346,7 +346,7 @@ header {
   display: block;
 }
 
-.hero-text h2 {
+.hero-text h1 {
   font-family: var(--font-sans);
   font-size: 1.2rem;
   font-weight: 500;
