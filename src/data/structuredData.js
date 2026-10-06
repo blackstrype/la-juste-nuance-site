@@ -59,3 +59,15 @@ export function buildService({ name, description, path }) {
     areaServed: areaServed(),
   };
 }
+
+// Breadcrumb trail: Accueil > current page.
+export function buildBreadcrumb({ name, path }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name, item: new URL(path, SITE_URL).href },
+    ],
+  };
+}

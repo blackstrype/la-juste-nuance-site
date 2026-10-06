@@ -1609,3 +1609,59 @@ footer {
   justify-content: center;
   gap: 1rem;
 }
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li + li::before {
+  content: '›';
+  margin-right: 0.5rem;
+}
+
+.breadcrumb a {
+  color: var(--color-sage-dark);
+  text-decoration: underline;
+}
+
+/* Related services (bottom of service pages) */
+.related-services {
+  margin-top: 4rem;
+}
+
+.related-services-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.related-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.related-services-list a,
+.related-services-all a {
+  color: var(--color-sage-dark);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.related-services-list a::after {
+  content: ' →';
+}
