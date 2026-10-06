@@ -1,5 +1,7 @@
 # La Juste Nuance Website
 
+Going live on `lajustenuance.fr`? See the [domain launch checklist](docs/DOMAIN_LAUNCH.md).
+
 ## API Keys
 
 ### Google Places API
