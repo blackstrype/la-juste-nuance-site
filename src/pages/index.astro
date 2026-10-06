@@ -1,9 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GoogleReviews from "../components/GoogleReviews.astro";
+import { buildFaq } from "../data/structuredData.js";
+
+// Single source for the visible FAQ and its FAQPage JSON-LD.
+const faqItems = [
+  {
+    question: "Pourquoi tu ne proposes pas d'accompagnement shopping ?",
+    answer: "Parce que mon objectif est de te rendre autonome. À la fin de l'accompagnement, tu sais exactement ce qui te correspond, pourquoi, et comment le trouver. Tu n'as plus besoin de moi en cabine.",
+  },
+  {
+    question: "Est-ce que tu vas me mettre dans une case ?",
+    answer: "Non. Mon travail commence exactement là où les cases s'arrêtent. Je ne pars pas d'une théorie pour te faire rentrer dedans mais je pars de toi pour construire avec toi.",
+  },
+  {
+    question: "Est-ce que tu vas me demander de jeter la moitié de mon dressing ?",
+    answer: "Non. L'idée n'est pas de tout recommencer, c'est de regarder ce que tu as déjà avec un oeil nouveau. Quelques pièces bien choisies et les bons accessoires peuvent tout changer.",
+  },
+  {
+    question: "Est-ce que cet accompagnement est fait pour moi si je ne suis pas une modeuse ?",
+    answer: "C'est exactement pour toi. Mon approche ne parle pas de tendances, elle parle de toi, de ta personnalité, de ta vie. Tu n'as pas besoin d'aimer la mode pour te sentir bien dans ce que tu portes.",
+  },
+  {
+    question: "Est-ce que je peux commencer par La Juste Palette avant de passer à La Juste Essence ?",
+    answer: "Oui, tout à fait. La Juste Palette est une porte d'entrée. Certaines femmes savent dès le départ qu'elles veulent aller plus loin, d'autres préfèrent commencer par là. Les deux chemins sont valables.",
+  },
+  {
+    question: "Combien de temps entre les séances ?",
+    answer: "Environ deux semaines, le temps que chaque découverte s'installe et mature avant d'aller plus loin.",
+  },
+  {
+    question: "Est-ce que le paiement en plusieurs fois est possible ?",
+    answer: "Le paiement s'effectue au rythme de l'accompagnement en une fois, deux fois ou trois fois selon la formule choisie.",
+  },
+];
+const jsonLd = [buildFaq(faqItems)];
 ---
 
-<Layout title="La Juste Nuance | Conseil en image aux Clayes-sous-Bois" description="Conseil en image aux Clayes-sous-Bois (Yvelines). Révélez votre style, vos couleurs et votre silhouette pour vous reconnecter à vous-même.">
+<Layout jsonLd={jsonLd} title="La Juste Nuance | Conseil en image aux Clayes-sous-Bois" description="Conseil en image aux Clayes-sous-Bois (Yvelines). Révélez votre style, vos couleurs et votre silhouette pour vous reconnecter à vous-même.">
 <!-- Hero Section (BLOC 1) -->
   <section class="hero" id="home">
     <div class="container">
@@ -393,68 +427,16 @@ import GoogleReviews from "../components/GoogleReviews.astro";
       <p class="section-subtitle">Des réponses à tes interrogations</p>
       
       <div class="faq-wrapper">
-        <div class="faq-item">
-          <button class="faq-question">Pourquoi tu ne proposes pas d'accompagnement shopping ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Parce que mon objectif est de te rendre autonome. À la fin de l'accompagnement, tu sais exactement ce qui te correspond, pourquoi, et comment le trouver. Tu n'as plus besoin de moi en cabine.
+        {faqItems.map(({ question, answer }) => (
+          <div class="faq-item">
+            <button class="faq-question">{question}</button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                {answer}
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Est-ce que tu vas me mettre dans une case ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Non. Mon travail commence exactement là où les cases s'arrêtent. Je ne pars pas d'une théorie pour te faire rentrer dedans mais je pars de toi pour construire avec toi.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Est-ce que tu vas me demander de jeter la moitié de mon dressing ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Non. L'idée n'est pas de tout recommencer, c'est de regarder ce que tu as déjà avec un oeil nouveau. Quelques pièces bien choisies et les bons accessoires peuvent tout changer.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Est-ce que cet accompagnement est fait pour moi si je ne suis pas une modeuse ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              C'est exactement pour toi. Mon approche ne parle pas de tendances, elle parle de toi, de ta personnalité, de ta vie. Tu n'as pas besoin d'aimer la mode pour te sentir bien dans ce que tu portes.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Est-ce que je peux commencer par La Juste Palette avant de passer à La Juste Essence ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Oui, tout à fait. La Juste Palette est une porte d'entrée. Certaines femmes savent dès le départ qu'elles veulent aller plus loin, d'autres préfèrent commencer par là. Les deux chemins sont valables.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Combien de temps entre les séances ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Environ deux semaines, le temps que chaque découverte s'installe et mature avant d'aller plus loin.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">Est-ce que le paiement en plusieurs fois est possible ?</button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              Le paiement s'effectue au rythme de l'accompagnement en une fois, deux fois ou trois fois selon la formule choisie.
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>

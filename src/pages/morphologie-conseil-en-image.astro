@@ -1,8 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { buildService } from "../data/structuredData.js";
+
+const title = "La Juste Allure - Morphologie & Conseil en image | La Juste Nuance";
+const description = "Pour te réapproprier ton corps et trouver des repères pour t'habiller avec plaisir. Accompagnement silhouette bienveillant aux Clayes-sous-Bois.";
+const jsonLd = [buildService({ name: "La Juste Allure", description, path: "morphologie-conseil-en-image" })];
 ---
 
-<Layout title="La Juste Allure - Morphologie & Conseil en image | La Juste Nuance" description="Pour te réapproprier ton corps et trouver des repères pour t'habiller avec plaisir. Accompagnement silhouette bienveillant aux Clayes-sous-Bois.">
+<Layout title={title} description={description} jsonLd={jsonLd}>
 <!-- Product Hero Section -->
   <section class="product-hero">
     <div class="container">

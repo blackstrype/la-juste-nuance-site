@@ -2,17 +2,21 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/style.css';
+import { buildBusiness } from '../data/structuredData.js';
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  jsonLd?: object[];
 }
 
-const { title, description, image = 'images/Conseil_en_image_les_Clayes_sous_Bois_banner.png' } = Astro.props;
+const { title, description, image = 'images/Conseil_en_image_les_Clayes_sous_Bois_banner.png', jsonLd = [] } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 // <base href> is set, so canonical and social URLs must be absolute.
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+// Business data on every page; pages add their own (FAQ, Service) via the jsonLd prop.
+const structuredData = [buildBusiness(), ...jsonLd];
 const imageUrl = new URL(image, new URL(baseUrl, Astro.site)).href;
 ---
 <!DOCTYPE html>
@@ -37,6 +41,8 @@ const imageUrl = new URL(image, new URL(baseUrl, Astro.site)).href;
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={imageUrl}>
+
+  {structuredData.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
 
   <!-- Calendly Widget CSS -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">

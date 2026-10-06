@@ -1,8 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { buildService } from "../data/structuredData.js";
+
+const title = "La Juste Garde-Robe - Tri de dressing & Conseil en image | La Juste Nuance";
+const description = "Composer avec ce que tu as déjà sans tout racheter. Formule complète de tri de dressing et d'accompagnement style à domicile aux Clayes-sous-Bois.";
+const jsonLd = [buildService({ name: "La Juste Garde-Robe", description, path: "tri-de-dressing-conseil-en-image" })];
 ---
 
-<Layout title="La Juste Garde-Robe - Tri de dressing & Conseil en image | La Juste Nuance" description="Composer avec ce que tu as déjà sans tout racheter. Formule complète de tri de dressing et d'accompagnement style à domicile aux Clayes-sous-Bois.">
+<Layout title={title} description={description} jsonLd={jsonLd}>
 <!-- Product Hero Section -->
   <section class="product-hero">
     <div class="container">
