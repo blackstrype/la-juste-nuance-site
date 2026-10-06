@@ -84,6 +84,41 @@ Repository → Settings → Pages.
 - [ ] Mobile pass: burger menu, booking buttons, FAQ, contact modal.
 - [ ] Search Console shows the sitemap as "Success" after a day or two.
 
+## 7. SEO after launch
+
+Goal: make sure Google (and optionally Bing) discovers and indexes the site, and that it shows up for local searches. This is account work done in the browser, not code. Do it once the site is live and step 6 is done.
+
+**Open questions (Florence / Scott), answer before starting:**
+- Who owns the Google account used for Search Console and Business Profile? Use one account that Florence can always access, and add the other person as an owner or manager.
+- Does Florence already have a Google Business Profile? If yes, claim and update it instead of creating a second one (duplicates hurt local ranking).
+- Which categories should the profile use? **TODO (Florence):** confirm the wording, e.g. « Consultant en image ».
+
+### Google Search Console (<https://search.google.com/search-console>)
+
+Step 5 already lists the basics; this is the full sequence.
+
+- [ ] Add a **Domain property** for `lajustenuance.fr` and verify it with the DNS TXT record (Search Console shows the value; add it in the Infomaniak DNS zone as a `TXT` record on the apex). No meta tag is needed in the site code. Only consider one if DNS verification turns out to be impossible.
+- [ ] Open **Sitemaps** and submit `sitemap-index.xml` (full address: `https://lajustenuance.fr/sitemap-index.xml`). After a day or two it should show "Success" and list the 8 indexable pages.
+- [ ] Open **URL Inspection**, paste `https://lajustenuance.fr/` and click **Request indexing** for the home page. Repeat for the other pages if you like.
+- [ ] Don't worry if the old short URLs (`/palette`, `/allure`, `/essence`, `/garde-robe`) appear in the reports. They are redirects marked `noindex`, which is intended.
+
+### Bing Webmaster Tools (optional, <https://www.bing.com/webmasters>)
+
+- [ ] Sign in and import the site from Google Search Console (the simplest option), or add it manually and verify with a DNS TXT record.
+- [ ] Submit `https://lajustenuance.fr/sitemap-index.xml`.
+
+### Google Business Profile (<https://business.google.com>)
+
+Local search for a local business depends heavily on this profile.
+
+- [ ] Create the profile, or claim the existing one, as a **service-area business**. Choose the option to **hide the street address** so only the service area is shown. This matches the legal pages, which deliberately don't publish the address.
+- [ ] Use exactly the same **business name** and **website URL** (`https://lajustenuance.fr/`) as on the site, so Google can match them.
+- [ ] Set the primary **category** (e.g. « Consultant en image », to be confirmed by Florence) and add secondary categories only if they truly apply.
+- [ ] Set the service area to the places Florence actually serves. **TODO (Florence):** confirm the list.
+- [ ] Complete the verification Google asks for (video, phone or postcard, depending on what is offered).
+- [ ] Add the website link and booking link if the profile offers those fields. Don't enter any address, phone number or opening hours that aren't already public.
+- [ ] Once verified, copy the public profile URL (the Google Maps / Business Profile link) and give it to the developer: it should be added to `sameAs` in the structured-data issue (JSON-LD), together with the Instagram and Facebook profiles.
+
 ## Rollback / troubleshooting
 
 - [ ] Revert the code PR from step 4 on a branch and open a PR (never push to `main` directly). The site returns to the `blackstrype.github.io` setup.
