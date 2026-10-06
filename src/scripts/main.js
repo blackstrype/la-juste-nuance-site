@@ -236,7 +236,7 @@ export const initContactModal = () => {
 
       try {
         const formData = new FormData(form);
-        const targetUrl = 'https://formsubmit.co/ajax/' + atob('ZmxvcmVuY2UuY29yb2xsZXVyQGdtYWlsLmNvbQ==');
+        const targetUrl = 'https://formsubmit.co/ajax/' + atob('ZmxvcmVuY2VAY2hyZXJpZUBsYWp1c3RlbnVhbmNlLmZy');
         const response = await fetch(targetUrl, {
           method: 'POST',
           body: formData,
