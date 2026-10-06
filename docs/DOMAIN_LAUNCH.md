@@ -9,15 +9,15 @@ Official reference (checked against the GitHub docs source, October 2026; re-che
 
 ## 1. Before buying the domain
 
-- [ ] **TODO (Scott): choose the registrar.** Pick one with easy DNS editing (A, AAAA, CNAME, TXT records) and free WHOIS privacy. Not decided yet.
-- [ ] Buy `lajustenuance.fr` and enable WHOIS privacy / data redaction.
+- [ ] **Registrar: Infomaniak (infomaniak.com).** Confirm it supports editing A, AAAA, CNAME and TXT records for `.fr` domains and offers WHOIS privacy / data redaction.
+- [ ] Buy `lajustenuance.fr` at Infomaniak and enable WHOIS privacy / data redaction.
 - [ ] Turn on auto-renewal and put the renewal date in a calendar. An expired domain takes the whole site down.
 - [ ] **TODO (Scott and Florence): decide whether a professional mailbox on the domain is wanted** (e.g. `contact@lajustenuance.fr`). If yes, the DNS step needs extra MX, SPF, DKIM and DMARC records from the mail provider. Skip otherwise.
 - [ ] Do not add GitHub Pages DNS records at the registrar's "parking page" defaults. Remove any default A/AAAA/CNAME records first.
 
 ## 2. DNS records
 
-Set these at the registrar (`TODO`: exact screen depends on the registrar).
+Set these in the Infomaniak manager, in the DNS zone of `lajustenuance.fr`.
 
 - [ ] Apex `lajustenuance.fr`, four `A` records:
   - `185.199.108.153`
@@ -66,7 +66,7 @@ Repository → Settings → Pages.
   2. Submit `https://lajustenuance.fr/sitemap-index.xml`.
   3. If the old `blackstrype.github.io/la-juste-nuance-site/` property exists, use its **Change of address** tool if it is available for that property type. GitHub Pages already redirects the old URL to the custom domain.
 - [ ] **Social profiles.** Update the website link and bio on Instagram and Facebook (the same profiles linked from `Header.astro` and `Footer.astro`).
-- [ ] **Legal page.** Update `mentions-legales` with the hosting provider and the registrar details once the registrar is chosen. Keep the street address hidden, as everywhere on the site. This is a code change, so do it in its own PR.
+- [ ] **Legal page.** Update `mentions-legales` with the hosting provider and the registrar details (registrar: Infomaniak). Keep the street address hidden, as everywhere on the site. This is a code change, so do it in its own PR.
 
 ## 6. Post-launch verification
 
