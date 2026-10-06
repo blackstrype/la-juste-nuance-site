@@ -1,11 +1,11 @@
 # La Juste Nuance — website
 
-Marketing site for **La Juste Nuance**, Florence's image-consulting business (conseil en image) in Les Clayes-sous-Bois, France. Built with **Astro** (static output) and deployed to **GitHub Pages** at `https://blackstrype.github.io/la-juste-nuance-site/`.
+Marketing site for **La Juste Nuance**, Florence's image-consulting business (conseil en image) in Les Clayes-sous-Bois, France. Built with **Astro** (static output) and deployed to **GitHub Pages** on the custom domain `https://lajustenuance.fr/` (apex is canonical).
 
 ## Commands
 
 - `npm ci`: install dependencies (Node >= 22.12)
-- `npm run dev`: local dev server at `http://localhost:4321/la-juste-nuance-site/`
+- `npm run dev`: local dev server at `http://localhost:4321/`
 - `npm run build`: production build to `dist/`
 - `npm test`: Vitest unit tests (jsdom environment)
 - `node scripts/benchmark.cjs`: Puppeteer image-load benchmark (needs the dev or preview server running)
@@ -31,7 +31,7 @@ Before opening a PR, always run `npm test` and `npm run build`, and make sure bo
 
 ## Gotchas
 
-- **Base path:** the site is served from `/la-juste-nuance-site/`. `Layout.astro` sets `<base href={BASE_URL}>`, so internal links and image paths are written **relative without a leading slash** (`href="about"`, `src="images/foo.jpg"`, `href="./#faq"`). A leading `/` breaks on GitHub Pages.
+- **Base path:** the site is served at the root of the custom domain (`base: '/'`, `public/CNAME`). `Layout.astro` sets `<base href={BASE_URL}>`, so internal links and image paths are written **relative without a leading slash** (`href="about"`, `src="images/foo.jpg"`, `href="./#faq"`). Keep it that way: a leading `/` would break if the site is ever served from a sub-path again.
 - `build.format: 'directory'` produces `page/index.html` so clean URLs work on Pages. Don't change it.
 - **Contact form** posts to formsubmit.co. The destination address is base64-encoded on purpose (light obfuscation against scrapers), so don't decode it into plain text.
 - **Calendly** booking link: `https://calendly.com/florence-corolleur/30min` (in `main.js`). `openCalendly` uses the popup widget when `window.Calendly` exists, and otherwise opens a new tab.
