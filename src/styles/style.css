@@ -347,13 +347,13 @@ header {
 }
 
 .hero-text h1 {
-  font-family: var(--font-sans);
-  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--color-sage-dark);
+  margin-bottom: 1rem;
 }
 
 .hero-text .subtitle {
@@ -456,6 +456,8 @@ header {
   padding-left: 2rem;
   margin-bottom: 1.2rem;
   color: var(--color-muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
 .pain-points-list li::before {
@@ -521,8 +523,9 @@ header {
 }
 
 .bio-content p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  color: var(--color-muted);
 }
 
 /* Bloc 3 Bonus: Imagine */
@@ -731,7 +734,7 @@ header {
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 2rem;
   flex-grow: 1;
 }
@@ -885,7 +888,7 @@ header {
 }
 
 .comparison-column p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 0;
 }
 
