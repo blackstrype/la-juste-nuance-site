@@ -27,11 +27,12 @@ export default defineConfig({
   },
   base: '/', // Served at the root of the custom domain (see public/CNAME)
   integrations: [sitemap()],
+  // Targets keep a trailing slash: pages are built as directories, so this avoids an extra redirect hop
   redirects: {
-    '/palette': '/colorimetrie-conseil-en-image',
-    '/allure': '/morphologie-conseil-en-image',
-    '/essence': '/style-conseil-en-image',
-    '/garde-robe': '/tri-de-dressing-conseil-en-image'
+    '/palette': '/colorimetrie-conseil-en-image/',
+    '/allure': '/morphologie-conseil-en-image/',
+    '/essence': '/style-conseil-en-image/',
+    '/garde-robe': '/tri-de-dressing-conseil-en-image/'
   },
   vite: {
     plugins: [devHtmlRewrite()],
